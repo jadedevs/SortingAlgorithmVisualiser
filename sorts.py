@@ -114,7 +114,7 @@ def heap_sort(title):
             largest = r
         if largest != i:
             arr[i], arr[largest] = arr[largest], arr[i] 
-            visualize(arr, i, largest, 'b') 
+            visualize(arr, i, largest, 'tab:blue') 
             heapify(arr, n, largest) 
 
     n = len(data)
@@ -124,7 +124,7 @@ def heap_sort(title):
 
     for i in range(n - 1, 0, -1):
         data[i], data[0] = data[0], data[i]
-        visualize(data, 0, i, 'b')
+        visualize(data, 0, i, 'tab:blue')
         heapify(data, i, 0)
 
-    visualize(data, 0, 0, 'b')
+    visualize(data, 0, 0, 'tab:blue')
